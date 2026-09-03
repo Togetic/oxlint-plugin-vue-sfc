@@ -1,0 +1,20 @@
+{
+    "jsPlugins": [
+        "../index.mjs"
+    ],
+    "rules": {
+        "vue-sfc/no-lone-template": "warn",
+        "vue-sfc/no-parsing-error": "error",
+        "vue-sfc/no-raw-text": "off",
+        "vue-sfc/no-ref-as-operand": "error",
+        "vue-sfc/no-template-shadow": "warn",
+        "vue-sfc/no-unused-components": "error",
+        "vue-sfc/no-unused-vars": "error",
+        "vue-sfc/no-useless-template-attributes": "error",
+        "vue-sfc/require-explicit-emits": "warn",
+        "vue-sfc/require-toggle-inside-transition": "error",
+        "vue-sfc/require-valid-default-prop": "error",
+        "vue-sfc/use-v-on-exact": "error",
+        "vue-sfc/v-on-event-hyphenation": "warn"
+    }
+}

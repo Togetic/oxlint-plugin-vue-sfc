@@ -1,0 +1,57 @@
+{
+    "name": "oxlint-plugin-vue",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Vue SFC template rules for oxlint, as a JS plugin. Ports of eslint-plugin-vue rules oxlint has no native equivalent for.",
+    "license": "MIT",
+    "keywords": [
+        "oxlint",
+        "oxc",
+        "vue",
+        "sfc",
+        "linter",
+        "eslint-plugin-vue",
+        "vue3",
+        "nuxt"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Togetic/oxlint-plugin-vue.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Togetic/oxlint-plugin-vue/issues"
+    },
+    "homepage": "https://github.com/Togetic/oxlint-plugin-vue#readme",
+    "author": "Togetic",
+    "exports": {
+        ".": "./index.mjs",
+        "./configs/recommended": "./configs/recommended.json",
+        "./configs/complement": "./configs/complement.json"
+    },
+    "main": "./index.mjs",
+    "files": [
+        "index.mjs",
+        "rules",
+        "!rules/*.spec.mjs",
+        "utils",
+        "configs",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "test": "node --test \"rules/*.spec.mjs\""
+    },
+    "dependencies": {
+        "@vue/compiler-sfc": "^3.5.0"
+    },
+    "devDependencies": {
+        "oxc-parser": "^0.90.0",
+        "oxlint": "^1.78.0"
+    },
+    "peerDependencies": {
+        "oxlint": ">=1.0.0"
+    },
+    "engines": {
+        "node": ">=20.19.0"
+    }
+}

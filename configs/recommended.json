@@ -1,0 +1,31 @@
+{
+    "jsPlugins": [
+        "../index.mjs"
+    ],
+    "rules": {
+        "vue-sfc/no-child-content": "error",
+        "vue-sfc/no-dupe-v-else-if": "error",
+        "vue-sfc/no-duplicate-attributes": "error",
+        "vue-sfc/no-lone-template": "warn",
+        "vue-sfc/no-mutating-props": "error",
+        "vue-sfc/no-parsing-error": "error",
+        "vue-sfc/no-raw-text": "off",
+        "vue-sfc/no-ref-as-operand": "error",
+        "vue-sfc/no-template-key": "error",
+        "vue-sfc/no-template-shadow": "warn",
+        "vue-sfc/no-textarea-mustache": "error",
+        "vue-sfc/no-unused-components": "error",
+        "vue-sfc/no-unused-vars": "error",
+        "vue-sfc/no-use-v-if-with-v-for": "error",
+        "vue-sfc/no-useless-template-attributes": "error",
+        "vue-sfc/no-v-text-v-html-on-component": "warn",
+        "vue-sfc/require-component-is": "error",
+        "vue-sfc/require-explicit-emits": "warn",
+        "vue-sfc/require-toggle-inside-transition": "error",
+        "vue-sfc/require-v-for-key": "error",
+        "vue-sfc/require-valid-default-prop": "error",
+        "vue-sfc/this-in-template": "warn",
+        "vue-sfc/use-v-on-exact": "error",
+        "vue-sfc/v-on-event-hyphenation": "warn"
+    }
+}
