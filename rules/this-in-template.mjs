@@ -1,4 +1,4 @@
-import { eachTemplateExpression, parseSfc, reportAtFileOffset } from "../utils/vue-sfc.mjs";
+import { eachTemplateExpression, parseSfc, reportAtFileOffset } from "oxlint-vue-sfc-harness";
 
 /**
  * Replacement for `vue/this-in-template` (no native oxlint equivalent — oxc#15761).

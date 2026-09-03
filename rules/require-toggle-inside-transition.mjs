@@ -5,7 +5,7 @@ import {
     parseSfc,
     reportAtFileOffset,
     walkTemplate,
-} from "../utils/vue-sfc.mjs";
+} from "oxlint-vue-sfc-harness";
 
 /**
  * Replacement for `vue/require-toggle-inside-transition` (no native oxlint equivalent — oxc#15761).

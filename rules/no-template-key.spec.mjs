@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { afterEach, describe, it } from "node:test";
 
-import { createLinter } from "../test-helpers.mjs";
+import { createLinter } from "oxlint-vue-sfc-harness/test-helpers";
 import rule from "./no-template-key.mjs";
 
 const { lintSource, lintTemplate, cleanup } = createLinter(rule, "ntk");

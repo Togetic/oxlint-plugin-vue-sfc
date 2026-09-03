@@ -1,4 +1,4 @@
-import { parseSfc, reportAtFileOffset } from "../utils/vue-sfc.mjs";
+import { parseSfc, reportAtFileOffset } from "oxlint-vue-sfc-harness";
 
 /**
  * Replacement for `vue/no-parsing-error` (no native oxlint equivalent — oxc#15761).

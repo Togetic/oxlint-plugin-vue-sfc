@@ -2,7 +2,7 @@
  * Positioned extraction of the variables a Vue template DECLARES — `v-for` aliases and `v-slot`
  * destructuring — shared by vue-no-unused-vars and vue-no-template-shadow.
  *
- * `utils/vue-sfc.mjs` already has `extractBindingNames`, but it returns names only and bails on
+ * `oxlint-vue-sfc-harness` already has `extractBindingNames`, but it returns names only and bails on
  * any pattern containing `:` or `=`. Both rules here need the OFFSET of each binding (reports
  * anchor on the identifier itself) and need to handle renames and defaults, so this is a
  * separate, more capable extractor rather than a change to that one.

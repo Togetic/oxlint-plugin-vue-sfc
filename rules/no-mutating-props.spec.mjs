@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { afterEach, describe, it } from "node:test";
 
-import { createSfcLinter } from "../test-helpers.mjs";
+import { createSfcLinter } from "oxlint-vue-sfc-harness/test-helpers";
 import rule from "./no-mutating-props.mjs";
 
 const { lintSfc, cleanup } = createSfcLinter(rule, "nmp");

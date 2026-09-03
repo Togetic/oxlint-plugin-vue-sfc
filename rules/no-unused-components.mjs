@@ -1,4 +1,4 @@
-import { NODE_ELEMENT, PROP_DIRECTIVE, parseSfc, walkTemplate } from "../utils/vue-sfc.mjs";
+import { NODE_ELEMENT, PROP_DIRECTIVE, parseSfc, walkTemplate } from "oxlint-vue-sfc-harness";
 
 /**
  * Replacement for `vue/no-unused-components` (no native oxlint equivalent — oxc#15761).

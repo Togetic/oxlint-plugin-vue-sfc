@@ -1,4 +1,4 @@
-import { NODE_ELEMENT, PROP_DIRECTIVE, parseSfc, reportAtFileOffset } from "../utils/vue-sfc.mjs";
+import { NODE_ELEMENT, PROP_DIRECTIVE, parseSfc, reportAtFileOffset } from "oxlint-vue-sfc-harness";
 import {
     bindingsWithOffsets,
     declaredAlias,

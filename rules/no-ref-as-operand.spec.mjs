@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
-import { createScriptLinter } from "../test-helpers.mjs";
+import { createScriptLinter } from "oxlint-vue-sfc-harness/test-helpers";
 import rule from "./no-ref-as-operand.mjs";
 
 const { lintScript } = createScriptLinter(rule);

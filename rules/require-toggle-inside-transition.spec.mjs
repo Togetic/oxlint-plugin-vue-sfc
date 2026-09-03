@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { afterEach, describe, it } from "node:test";
 
-import { createLinter } from "../test-helpers.mjs";
+import { createLinter } from "oxlint-vue-sfc-harness/test-helpers";
 import rule from "./require-toggle-inside-transition.mjs";
 
 const { lintSource, lintTemplate, cleanup } = createLinter(rule, "rtt");

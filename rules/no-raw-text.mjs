@@ -1,4 +1,4 @@
-import { NODE_ELEMENT, NODE_TEXT, parseSfc, reportAtFileOffset } from "../utils/vue-sfc.mjs";
+import { NODE_ELEMENT, NODE_TEXT, parseSfc, reportAtFileOffset } from "oxlint-vue-sfc-harness";
 
 /**
  * Replacement for `@intlify/vue-i18n/no-raw-text` (no native oxlint equivalent —

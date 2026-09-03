@@ -5,7 +5,7 @@ import {
     parseSfc,
     reportAtFileOffset,
     walkTemplate,
-} from "../utils/vue-sfc.mjs";
+} from "oxlint-vue-sfc-harness";
 import {
     bindingsWithOffsets,
     declaredAlias,

@@ -5,7 +5,7 @@ import {
     parseSfc,
     reportAtFileOffset,
     walkTemplate,
-} from "../utils/vue-sfc.mjs";
+} from "oxlint-vue-sfc-harness";
 
 /**
  * Replacement for `vue/require-v-for-key` (no native oxlint equivalent — oxlint's 46
