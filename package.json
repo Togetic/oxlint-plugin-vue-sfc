@@ -1,6 +1,6 @@
 {
-    "name": "oxlint-plugin-vue",
-    "version": "0.1.0",
+    "name": "oxlint-plugin-vue-sfc",
+    "version": "0.1.1",
     "type": "module",
     "description": "Vue SFC template rules for oxlint, as a JS plugin. Ports of eslint-plugin-vue rules oxlint has no native equivalent for.",
     "license": "MIT",
@@ -16,12 +16,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Togetic/oxlint-plugin-vue.git"
+        "url": "git+https://github.com/Togetic/oxlint-plugin-vue-sfc.git"
     },
     "bugs": {
-        "url": "https://github.com/Togetic/oxlint-plugin-vue/issues"
+        "url": "https://github.com/Togetic/oxlint-plugin-vue-sfc/issues"
     },
-    "homepage": "https://github.com/Togetic/oxlint-plugin-vue#readme",
+    "homepage": "https://github.com/Togetic/oxlint-plugin-vue-sfc#readme",
     "author": "Togetic",
     "exports": {
         ".": "./index.mjs",

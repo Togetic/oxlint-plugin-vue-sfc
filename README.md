@@ -1,4 +1,4 @@
-# oxlint-plugin-vue
+# oxlint-plugin-vue-sfc
 
 Vue SFC template rules for [oxlint](https://oxc.rs), as a JS plugin.
 
@@ -13,7 +13,7 @@ production Nuxt monorepo — 1581 SFCs, all template-first — where they replac
 ## Install
 
 ```bash
-npm i -D oxlint-plugin-vue
+npm i -D oxlint-plugin-vue-sfc
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ Extend a preset from your `.oxlintrc.json`:
 
 ```jsonc
 {
-    "extends": ["./node_modules/oxlint-plugin-vue/configs/recommended.json"]
+    "extends": ["./node_modules/oxlint-plugin-vue-sfc/configs/recommended.json"]
 }
 ```
 
@@ -37,7 +37,7 @@ Or wire it up by hand:
 
 ```jsonc
 {
-    "jsPlugins": ["./node_modules/oxlint-plugin-vue/index.mjs"],
+    "jsPlugins": ["./node_modules/oxlint-plugin-vue-sfc/index.mjs"],
     "rules": {
         "vue-sfc/require-v-for-key": "error",
         "vue-sfc/no-raw-text": "off"
