@@ -190,13 +190,3 @@ export const collectPatternNames = (pattern, into) => {
     }
 };
 
-/** Set of static `v-on` event names (`@click`, `v-on:click`) on a template element. */
-export function eventNames(el) {
-    const names = new Set();
-    for (const p of el.props ?? []) {
-        if (p.type === PROP_DIRECTIVE && p.name === "on" && p.arg?.type === 4 /* SIMPLE */) {
-            names.add(p.arg.content);
-        }
-    }
-    return names;
-}
