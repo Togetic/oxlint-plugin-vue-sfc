@@ -150,4 +150,15 @@ describe("vue-require-v-for-key", () => {
     it("does nothing for a script-only SFC (no template AST)", () => {
         assert.equal(lintSource('<script setup lang="ts">\nconst x = 1;\n</script>\n').length, 0);
     });
+
+    it("still prefixes the position when <script setup> is EMPTY", () => {
+        // Regression: an empty script block makes @vue/compiler-sfc report `scriptSetup` as null.
+        // Reading that as offset 0 silently took the range path with the file offset unadjusted,
+        // dropping the real template position from the message.
+        const reports = lintSource(
+            '<template>\n    <li v-for="r in rows" />\n</template>\n<script setup lang="ts"></script>\n',
+        );
+        assert.equal(reports.length, 1);
+        assert.match(reports[0].message, /\[template 2:5\]/);
+    });
 });

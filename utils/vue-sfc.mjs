@@ -60,8 +60,14 @@ export function scriptStartOffset(descriptor) {
  * though the squiggle is stuck on the script block.
  */
 export function reportAtFileOffset(context, entry, fileStart, fileEnd, message) {
-    const base = scriptStartOffset(entry.descriptor);
-    const start = fileStart - base;
+    // An EMPTY `<script setup></script>` makes @vue/compiler-sfc report `descriptor.scriptSetup`
+    // as null, so there is no block offset to be relative to. Reading that as a base of 0 would
+    // silently take the range path below with the file offset unadjusted, putting the diagnostic
+    // at an arbitrary position instead of prefixing the real one. Treat "no block" as
+    // unrepresentable and fall through to the prefixed form.
+    const block = entry.descriptor.scriptSetup ?? entry.descriptor.script;
+    const base = block ? block.loc.start.offset : null;
+    const start = base === null ? -1 : fileStart - base;
     if (start >= 0) {
         context.report({
             node: { type: "TemplateDiagnostic", range: [start, fileEnd - base] },
