@@ -116,7 +116,7 @@ They gate new violations rather than opening a migration: all 24 report zero dia
 ## Tests
 
 ```bash
-npm test    # node:test, 320 specs across 24 rules
+npm test    # node:test, 324 specs across 24 rules
 ```
 
 ## License

@@ -28,6 +28,8 @@ import {
  *   is legitimate. This alone accounted for 5 of the 10 false positives.
  * - The report is anchored on the CHILD element, not on the `<Transition>` (column parity).
  * - A toggle on any qualifying child satisfies it; not all children need one.
+ * - A bound `:key` counts as a toggle, as eslint-plugin-vue's `hasDirective(element, "bind",
+ *   "key")` exemption does: a new key replaces the child, which is an enter and a leave.
  */
 
 // `<TransitionGroup>` is deliberately OUT of scope. It animates list MEMBERSHIP changes, so
@@ -67,11 +69,11 @@ function hasToggle(node) {
         if (TOGGLE_DIRECTIVES.has(prop.name)) {
             return true;
         }
-        // Dynamic `<component :is>`: swapping the resolved component is the enter/leave.
+        // Dynamic `<component :is>`, or a bound `:key`: swapping either is the enter/leave.
         if (
             prop.name === "bind" &&
             prop.arg?.type === 4 /* SIMPLE_EXPRESSION */ &&
-            prop.arg.content === "is"
+            (prop.arg.content === "is" || prop.arg.content === "key")
         ) {
             return true;
         }

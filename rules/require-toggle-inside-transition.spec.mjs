@@ -24,6 +24,21 @@ describe("vue-require-toggle-inside-transition", () => {
         assert.equal(lintTemplate('<Transition><component :is="C" /></Transition>').length, 0);
     });
 
+    it("passes a child with a bound :key (a new key is a leave and an enter)", () => {
+        assert.equal(lintTemplate('<Transition><div :key="a">x</div></Transition>').length, 0);
+    });
+
+    it("passes the long v-bind:key form", () => {
+        assert.equal(
+            lintTemplate('<Transition><div v-bind:key="a">x</div></Transition>').length,
+            0,
+        );
+    });
+
+    it("still reports a static key attribute (it never changes)", () => {
+        assert.equal(lintTemplate('<Transition><div key="a">x</div></Transition>').length, 1);
+    });
+
     it("matches the lowercase <transition> spelling", () => {
         assert.equal(lintTemplate("<transition><div>x</div></transition>").length, 1);
     });
